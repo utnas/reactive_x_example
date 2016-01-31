@@ -4,6 +4,7 @@ import rx.observers.TestSubscriber;
 
 import static java.util.Arrays.asList;
 import static java.util.Collections.EMPTY_LIST;
+import static java.util.Collections.singletonList;
 
 public class ObservableTest {
 
@@ -33,7 +34,7 @@ public class ObservableTest {
 
         //Then
         testSubscriber.assertNoErrors();
-        testSubscriber.assertReceivedOnNext(asList("String value"));
+        testSubscriber.assertReceivedOnNext(singletonList("String value"));
         testSubscriber.assertCompleted();
     }
 
