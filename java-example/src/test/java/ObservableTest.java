@@ -9,7 +9,7 @@ import static java.util.Collections.singletonList;
 public class ObservableTest {
 
     @Test
-    public void emptyObservable() {
+    public void emptyObservableTest() {
         //Given
         final Observable<String> empty = Observable.empty();
         final TestSubscriber<String> testSubscriber = new TestSubscriber<>();
@@ -24,7 +24,7 @@ public class ObservableTest {
     }
 
     @Test
-    public void justObservableWithValue() {
+    public void justObservableWithValueTestT() {
         // Given
         final Observable<String> stringValue = Observable.just("String value");
         final TestSubscriber<String> testSubscriber = new TestSubscriber<>();
@@ -39,7 +39,7 @@ public class ObservableTest {
     }
 
     @Test
-    public void fromObservable() {
+    public void fromObservableTest() {
         //Given
         final Observable<String> values = Observable.from(asList("one", "two", "three"));
         final TestSubscriber<String> testSubscriber = new TestSubscriber<>();
