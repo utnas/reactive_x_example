@@ -11,11 +11,11 @@ public class ObservableTest {
     @Test
     public void emptyObservableTest() {
         //Given
-        final Observable<String> empty = Observable.empty();
+        final Observable<String> emptyObservable = Observable.empty();
         final TestSubscriber<String> testSubscriber = new TestSubscriber<>();
 
         //When
-        empty.subscribe(testSubscriber);
+        emptyObservable.subscribe(testSubscriber);
 
         //Then
         testSubscriber.assertNoErrors();
@@ -26,11 +26,11 @@ public class ObservableTest {
     @Test
     public void justObservableWithValueTestT() {
         // Given
-        final Observable<String> stringValue = Observable.just("value");
+        final Observable<String> observable = Observable.just("value");
         final TestSubscriber<String> testSubscriber = new TestSubscriber<>();
 
         //When
-        stringValue.subscribe(testSubscriber);
+        observable.subscribe(testSubscriber);
 
         //Then
         testSubscriber.assertNoErrors();
@@ -41,11 +41,11 @@ public class ObservableTest {
     @Test
     public void fromObservableTest() {
         //Given
-        final Observable<String> values = Observable.from(asList("one", "two", "three"));
+        final Observable<String> observable = Observable.from(asList("one", "two", "three"));
         final TestSubscriber<String> testSubscriber = new TestSubscriber<>();
 
         //When
-        values.subscribe(testSubscriber);
+        observable.subscribe(testSubscriber);
 
         //Then
         testSubscriber.assertNoErrors();
