@@ -26,7 +26,7 @@ public class ObservableTest {
     @Test
     public void justObservableWithValueTestT() {
         // Given
-        final Observable<String> stringValue = Observable.just("String value");
+        final Observable<String> stringValue = Observable.just("value");
         final TestSubscriber<String> testSubscriber = new TestSubscriber<>();
 
         //When
@@ -34,7 +34,7 @@ public class ObservableTest {
 
         //Then
         testSubscriber.assertNoErrors();
-        testSubscriber.assertReceivedOnNext(singletonList("String value"));
+        testSubscriber.assertReceivedOnNext(singletonList("value"));
         testSubscriber.assertCompleted();
     }
 
